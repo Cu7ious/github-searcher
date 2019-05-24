@@ -1,0 +1,14 @@
+.wrapper {
+  & .app {
+    & .sorter {
+      & h6 {
+        cursor: pointer;
+        color: #3d425570;
+
+        &.active-sorter-control {
+          color: #3d4255;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.wrapper {
+  & .app {
+    & .input-group {
+      background-color: #ffffffcc;
+      margin-bottom: 20px;
+
+      display: grid;
+      grid-template-columns: 42% 1% 42% 1% 14%;
+      grid-template-rows: auto;
+      grid-template-areas: "search-controls-searchbox search-controls-divider search-controls-select search-controls-divider-2 search-controls-submit";
+
+      & .search-controls-divider {
+        background-color: #e0e0e0;
+        grid-area: search-controls-divider
+      }
+
+      & .search-controls-divider-2 {
+        background-color: #e0e0e0;
+        grid-area: search-controls-divider-2
+      }
+
+      & button {
+        border: 0;
+        height: 40px;
+        outline: none;
+        font-size: 25px;
+        min-height: 100%;
+        cursor: pointer;
+        border-radius: 0;
+        font-weight: 300;
+        color: #808080;
+        background: transparent;
+        grid-area: search-controls-submit;
+        transition: color, box-shadow .5s ease;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.05),
+          0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          color: #333;
+        }
+
+        &:active {
+          transition: box-shadow .2s ease;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.05),
+            0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        &:focus {
+          color: #333;
+        }
+
+        @media screen and (max-width: 1299px) {
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: 1023px) {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}
